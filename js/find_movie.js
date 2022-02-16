@@ -64,6 +64,7 @@ function getResponse(url, indicator = '?s=', type, func) {
         },
         url: `${url}/${indicator}${str}`,
         success: function (response) {
+            console.log(response);
             loadResponse(response, type, func);
             times++;
             SetOrder(times);
@@ -72,6 +73,7 @@ function getResponse(url, indicator = '?s=', type, func) {
         }, beforeSend: function () {
             $('.please-wait').removeClass('close');
         }, error: function (jqXHR, exception) {
+            console.log(jqXHR);
             var msg = '';
             if (jqXHR.status === 0) {
                 msg = 'Not connect. Verify Network';
