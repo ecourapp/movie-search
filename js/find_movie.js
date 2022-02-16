@@ -78,7 +78,7 @@ function getResponse(url, indicator = '?s=', type, func) {
 }
 
 
-function getResponsePost(url, datas={}, type, func) {
+function getResponsePost(url, datas = {}, type, func) {
     $.ajax({
         type: "POST",
         url: `${url}`,
@@ -86,9 +86,7 @@ function getResponsePost(url, datas={}, type, func) {
         success: function (response) {
             loadResponse(response, type, func);
             times++;
-            SetOrder(times);
-            notFound(times);
-            $('.please-wait').addClass('close');
+            done(times);
         }, beforeSend: function () {
             $('.please-wait').removeClass('close');
         }, error: function (jqXHR, exception) {
@@ -115,6 +113,13 @@ function getResponsePost(url, datas={}, type, func) {
     });
 }
 
+function done(times) {
+    notFound(times);
+    SetOrder(times);
+    if (times == 5) {
+        $('.please-wait').addClass('close');
+    }
+}
 
 function notFound(time) {
     if (time == 5) {
