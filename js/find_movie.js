@@ -1,3 +1,16 @@
+let string_search = window.location.search.split('?name=')[1].split('+');
+let final_search = '';
+if (string_search.length > 1) {
+    for (let i = 0; i < string_search.length; i++) {
+        const element = string_search[i];
+        final_search += (i == (string_search.length - 1)) ? element : element + ' ';
+    }
+    final_search += '';
+} else {
+    final_search = string_search[0];
+}
+$('#search-input').val(final_search);
+
 Reset();
 
 let times = 0;
