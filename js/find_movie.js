@@ -57,6 +57,8 @@ function getResponse(url, indicator = '?s=', type, func) {
     let str = window.location.search.split('?name=')[1];
     $.ajax({
         type: "GET",
+        crossDomain: true,
+        dataType: 'jsonp',
         url: `${url}/${indicator}${str}`,
         success: function (response) {
             loadResponse(response, type, func);
@@ -94,6 +96,8 @@ function getResponse(url, indicator = '?s=', type, func) {
 function getResponsePost(url, datas = {}, type, func) {
     $.ajax({
         type: "POST",
+        crossDomain: true,
+        dataType: 'jsonp',
         url: `${url}`,
         data: datas,
         success: function (response) {
