@@ -59,6 +59,9 @@ function getResponse(url, indicator = '?s=', type, func) {
         type: "GET",
         crossDomain: true,
         dataType: 'jsonp',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
         url: `${url}/${indicator}${str}`,
         success: function (response) {
             loadResponse(response, type, func);
@@ -98,6 +101,9 @@ function getResponsePost(url, datas = {}, type, func) {
         type: "POST",
         crossDomain: true,
         dataType: 'jsonp',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
         url: `${url}`,
         data: datas,
         success: function (response) {
