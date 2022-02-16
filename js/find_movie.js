@@ -57,7 +57,6 @@ function getResponse(url, indicator = '?s=', type, func) {
     let str = window.location.search.split('?name=')[1];
     $.ajax({
         type: "GET",
-        crossDomain: true,
         headers: {
             'Access-Control-Allow-Origin': '*'
         },
@@ -100,7 +99,6 @@ function getResponse(url, indicator = '?s=', type, func) {
 function getResponsePost(url, datas = {}, type, func) {
     $.ajax({
         type: "POST",
-        crossDomain: true,
         headers: {
             'Access-Control-Allow-Origin': '*'
         },
