@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+/* Root */
+:root {
+    --blue-color: #0d9fe5;
+    --red-color: #d01822;
+    --white: #ffffff;
+    --light-text: #b3b3b3;
+    --dark-text: #999;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'IRANSans', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+p {
+    margin-bottom: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+    direction: rtl;
+    background-color: #222;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.en {
+    font-family: 'Dongle', sans-serif;
+}
+
+.content {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('images/2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content li {
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: #fff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+}

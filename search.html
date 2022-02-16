@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/2.png">
+    <title>Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="components/fonts/iransanse/fontiran.css">
+    <link rel="stylesheet" href="components/fontawesome/css/all.css">
+
+</head>
+
+<body>
+    
+    <div class="header-search">
+        <form action="search.html">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Search..." class="en"
+                    autocomplete="off">
+                <button type="submit"><i class="fad fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="please-wait">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul></ul>
+    </div>
+    <div class="not-found">
+        <p class="en">No Result</p>
+    </div>
+    <div class="error">
+        <p class="en"></p>
+    </div>
+    <footer>
+        <a href="index.html" class="logo">
+            <h1 class="en">Spiderwick</h1>
+            <img src="images/2.png" alt="">
+        </a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="js/find_movie.js"></script>
+    <script src="js/set_order.js"></script>
+    <script src="js/mobomoviez.js"></script>
+    <script src="js/zarfilm.js"></script>
+    <script src="js/almas.js"></script>
+    <script src="js/avamovie.js"></script>
+    <script src="js/alefmovie.js"></script>
+</body>
+
+</html>
