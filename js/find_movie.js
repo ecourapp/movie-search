@@ -57,9 +57,6 @@ function getResponse(url, indicator = '?s=', type, func) {
     let str = window.location.search.split('?name=')[1];
     $.ajax({
         type: "GET",
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
         url: `${url}/${indicator}${str}`,
         success: function (response) {
             console.log(response);
@@ -99,9 +96,6 @@ function getResponse(url, indicator = '?s=', type, func) {
 function getResponsePost(url, datas = {}, type, func) {
     $.ajax({
         type: "POST",
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
         url: `${url}`,
         data: datas,
         success: function (response) {
