@@ -58,7 +58,6 @@ function getResponse(url, indicator = '?s=', type, func) {
     $.ajax({
         type: "GET",
         crossDomain: true,
-        dataType: 'jsonp',
         headers: {
             'Access-Control-Allow-Origin': '*'
         },
@@ -102,7 +101,6 @@ function getResponsePost(url, datas = {}, type, func) {
     $.ajax({
         type: "POST",
         crossDomain: true,
-        dataType: 'jsonp',
         headers: {
             'Access-Control-Allow-Origin': '*'
         },
